@@ -1,26 +1,60 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header>
+    <div id="app">
+      <HeaderComponent></HeaderComponent>
+      <MenuDrawer></MenuDrawer>
+      <HeroBanner></HeroBanner>
+      <CartDrawer></CartDrawer>
+      <FeaturedProducts></FeaturedProducts>
+      <FooterComponent></FooterComponent>
+    </div>
+  </header>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComponent from './components/HeaderComponent.vue';
+import HeroBanner from './components/HeroBanner.vue';
+import CartDrawer from './components/cartDrawer.vue';
+import FeaturedProducts from './components/FeaturedProducts.vue';
+import MenuDrawer from './components/menuDrawer.vue';
+import FooterComponent from './components/FooterComponent.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    name: 'app',
+    components: {
+    HeaderComponent,
+    HeroBanner,
+    CartDrawer,
+    FeaturedProducts,
+    MenuDrawer,
+    FooterComponent
 }
+}
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body{
+  margin: 0;
+}
+#app{
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 991px){
+  .large-hide{
+    display: none !important;
+  }
+}
+@media screen and (max-width: 749px){
+  .small-hide{
+    display: none !important;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 990px){
+  .mediun-hide{
+    display: none !important;
+  }
 }
 </style>

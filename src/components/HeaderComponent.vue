@@ -2,7 +2,7 @@
     <div class="header">
 
       <div class="logo">
-        <img src="@/assets/logo.jpeg" alt="logo">
+        <img :src="require('../assets/logo.jpeg')" alt="logo">
       </div>
 
       <nav class="nav-menu mediun-hide small-hide">
@@ -14,11 +14,11 @@
 
       <div class="header-icons">
         <a v-on:click="openDrawer" class="cart-icon icon">
-          <img src="@/assets/icon_favorite.png" alt="favorite-products" width="45" height="45" >
+          <img :src="require('../assets/icon_favorite.png')" alt="favorite-products" width="45" height="45" >
         </a>
 
         <a v-on:click="openMenuDrawer" class="menu-icon icon large-hide">
-          <img src="@/assets/icon-hamburger.svg" alt="icon-menu" width="35" height="25">
+          <img :src="require('../assets/icon-hamburger.svg')" alt="icon-menu" width="35" height="25">
         </a>
     </div>
     </div>
@@ -37,7 +37,6 @@ export default{
         },
         openMenuDrawer: function openMenuDrawer(){
           let drawerElem = document.querySelector('.menu-drawer_container');
-          console.log(drawerElem);
           drawerElem?.querySelector('.menu-drawer').classList.remove('hide_drawer');
           drawerElem?.querySelector('.bg-overlay').classList.remove('hide');
         }

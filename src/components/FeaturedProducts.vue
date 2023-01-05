@@ -2,8 +2,8 @@
   <div class="featured-products">
     <carousel :breakpoints='breakpoints'>
 
-        <slide v-for="slide in 10" :key="slide">
-          <a href="#">
+        <slide v-for="slide in 10" :key="slide" class="cell">
+          <a href="../pages/Product.vue">
             <div class="product-card">
               <div class="media-container">
                   <picture>
@@ -69,10 +69,24 @@ export default {
 <style lang="scss">
   .featured-products{
     width: 70%;
-    margin: auto;
+    margin: 8rem auto;
+
+    @media screen and (max-width: 749px){
+      margin: 4rem auto;
+    }
+    
+    .cell{
+      &:hover h5{
+        transform: scale(1.1);
+      }
+
+      h5{
+        letter-spacing: .8px;
+      }
+    }
 
     .carousel{
-
+      
       .carousel__prev, .carousel__next{
         background-color: transparent;
         color: black;

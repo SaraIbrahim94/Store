@@ -2,13 +2,17 @@
   <header>
     <div id="app">
       <HeaderComponent></HeaderComponent>
+
       <MenuDrawer></MenuDrawer>
       <HeroBanner></HeroBanner>
       <CartDrawer></CartDrawer>
       <FeaturedProducts></FeaturedProducts>
+      <ImageText></ImageText>
+
       <FooterComponent></FooterComponent>
     </div>
   </header>
+
 </template>
 
 <script>
@@ -18,17 +22,19 @@ import CartDrawer from './components/cartDrawer.vue';
 import FeaturedProducts from './components/FeaturedProducts.vue';
 import MenuDrawer from './components/menuDrawer.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import ImageText from './components/imageText.vue';
 
-export default {
-    name: 'app',
-    components: {
-    HeaderComponent,
-    HeroBanner,
-    CartDrawer,
-    FeaturedProducts,
-    MenuDrawer,
-    FooterComponent
-}
+  export default {
+      name: 'app',
+      components: {
+      HeaderComponent,
+      HeroBanner,
+      CartDrawer,
+      FeaturedProducts,
+      MenuDrawer,
+      FooterComponent,
+      ImageText
+  }
 }
 
 </script>

@@ -42,7 +42,7 @@
         }
 
         .media-img{
-            height: 50vh;
+            height: 75vh;
 
             @media screen and (max-width: 749px){
                 height: 70vh;
@@ -56,14 +56,27 @@
             animation: 2s fade-in .1s forwards;
             opacity: 0;
             right: 0;
+            @media screen and (min-width: 750px){
             top: 40%;
+            }
             flex-direction: column;
+
+            @media screen and (max-width: 749px){
+                background-color: transparent;
+                height: 100%;
+                justify-content: flex-end;
+                width: 100%;
+            }
 
             h2{
                 font-size: 3.5rem;
                 font-family: cursive;
                 letter-spacing: .5rem;
                 margin: 0 2rem;
+
+                @media screen and (max-width: 749px){
+                    text-align: center;
+                }
             }
 
             a{
@@ -77,6 +90,10 @@
                 font-family: system-ui;
                 font-size: 1.8rem;
                 margin: 1rem 2rem;
+
+                &:hover{
+                    background-color: rgb(42, 40, 40);
+                }
             }
         }
     }

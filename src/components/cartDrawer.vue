@@ -4,7 +4,7 @@
         <div class="cart-drawer hide_drawer">
             
             <div class="cart-drawer_header">
-                <a @click="closeDrawer" class="close"><img src="../assets/icon-close.svg" alt="close-icon"></a>
+                <a @click="closeDrawer" class="close"><img :src="require('../assets/icon-close.svg')" alt="close-icon"></a>
                 <div class="cart-title"> <h4>Your Cart</h4></div>
             </div>
 
